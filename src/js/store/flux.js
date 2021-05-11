@@ -1,3 +1,4 @@
+import DataBank from "./bankData.json";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -16,12 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log("error", error));
 			},
 			bank_data: () => {
-				fetch("../bankData.json")
-					.then(response => console.log(response))
-					.then(result => {
-						setStore({ bankData: result });
-					})
-					.catch(error => console.log(error, "error en bank data"));
+				setStore({ bankData: DataBank.Data_bank });
 			}
 		}
 	};

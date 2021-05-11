@@ -11,7 +11,11 @@ const Profile = () => {
 	return (
 		<div>
 			{store.bankData.map((index, key) => {
-				return <div key={key}>{index.band_account} </div>;
+				return (
+					<div className="container" key={key}>
+						<p>Loan: {index.loan} </p>
+					</div>
+				);
 			})}
 		</div>
 	);

@@ -8,7 +8,6 @@ import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 import Profile from "./views/Profile.jsx";
 
 //create your first component
@@ -32,14 +31,13 @@ const Layout = () => {
 						<Route exact path="/single/:theid">
 							<Single />
 						</Route>
+						<Route exact path="/profile">
+							<Profile />
+						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
-						<Route exact path="/profil">
-							<Profile />
-						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
